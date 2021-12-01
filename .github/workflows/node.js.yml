@@ -9,9 +9,7 @@ on:
       - develop
       - staging
       - test
-      - gh-pages
-      - dependabot/*
-      
+            
   pull_request:
     branches: [ master, gh-pages ]
 
@@ -32,3 +30,15 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm run build --if-present
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+    steps:
+      - name: Run npm tests
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm test a
