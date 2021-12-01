@@ -18,6 +18,10 @@ Created with _create-react-app_. See the [full create-react-app guide](https://g
 
 `npm start`
 
+##
+
+`npm test a`
+
 ## Enhancement
 
 1. Removing the dependency of Materialize-CSS module
