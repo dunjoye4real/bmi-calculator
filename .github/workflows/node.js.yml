@@ -7,7 +7,7 @@ on:
   push:
     branches:
       - develop
-      - staging
+      - gh-pages
       - test
             
   pull_request:
