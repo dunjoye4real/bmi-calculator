@@ -27,3 +27,10 @@ Created with _create-react-app_. See the [full create-react-app guide](https://g
 1. Removing the dependency of Materialize-CSS module
 
 ~~2. Chart going crazy on hovering over the old points~~
+
+## Run with docker
+
+1. Clone and cd into repository
+2. Build docker image: `docker build -t bmi-calculator .`
+3. Run container with built image: `docker run -ti -p 127.0.0.1:8080:80 bmi-calculator`
+4. Visit `http://127.0.0.1:8080/` on you browser.
