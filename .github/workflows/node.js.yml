@@ -52,6 +52,8 @@ jobs:
       matrix:
         node-version: [16.x]
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
       - name: Install modules and build
         uses: actions/setup-node@v2
         with:
