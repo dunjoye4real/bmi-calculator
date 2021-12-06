@@ -54,6 +54,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+        with:
+          ref: gh-pages
       - name: Install modules and build
         uses: actions/setup-node@v2
         with:
