@@ -44,6 +44,7 @@ jobs:
       - run: npm test a
   deploy:
     runs-on: ubuntu-latest
+    needs: test
     strategy:
       matrix:
         node-version: [16.x]
