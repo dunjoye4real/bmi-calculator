@@ -54,8 +54,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-        with:
-          ref: gh-pages
       - name: Install modules and build
         uses: actions/setup-node@v2
         with:
@@ -66,5 +64,5 @@ jobs:
         # run: npm run deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          personal_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: ./build
